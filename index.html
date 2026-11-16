@@ -1,0 +1,356 @@
+<!-- JVZoo version: buy URL wired at product creation -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kids Activity Book Generator — Create Mazes, Coloring Pages, Word Searches, Dot-to-Dot &amp; More for KDP and Etsy</title>
+<meta name="description" content="Kids Activity Book Generator: one online tool with 7 activity makers — mazes, word searches, coloring pages, dot-to-dot, tracing, counting and odd-one-out — plus a Book Builder for complete, print-ready kids activity books for Amazon KDP and Etsy. Ages 4–8. Runs in your browser — nothing to install.">
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family: 'Segoe UI', system-ui, -apple-system, Arial, sans-serif; color:#1a1a1a; line-height:1.65; background:#f7f7f9; padding-bottom:72px; }
+  .wrap { max-width:760px; margin:0 auto; padding:0 20px; }
+  header.hero { background:linear-gradient(135deg,#0f2027,#203a43,#2c5364); color:#fff; padding:56px 0 48px; text-align:center; }
+  .eyebrow { display:inline-block; font-size:13px; letter-spacing:2px; text-transform:uppercase; color:#ffd166; margin-bottom:14px; }
+  header.hero h1 { font-size:40px; line-height:1.15; margin-bottom:12px; }
+  header.hero .sub { font-size:19px; color:#dbe7ee; max-width:620px; margin:0 auto 26px; }
+  .cover { margin:28px auto; max-width:300px; border-radius:8px; box-shadow:0 18px 50px rgba(0,0,0,.45); display:block; width:100%; height:auto; }
+  .cta-btn { display:inline-block; background:#e63946; color:#fff; font-size:20px; font-weight:700; padding:16px 46px; border-radius:8px; text-decoration:none; border:none; cursor:pointer; box-shadow:0 8px 24px rgba(230,57,70,.45); transition:transform .15s; }
+  .cta-btn:hover { transform:translateY(-2px); }
+  .cta-btn.gold { background:#ffd166; color:#0f2027; box-shadow:0 8px 24px rgba(255,209,102,.35); }
+  .price-note { margin-top:12px; font-size:14px; color:#cfe0ea; }
+  .hero-price { margin-top:14px; font-size:17px; color:#dbe7ee; }
+  .hero-price s { color:#9fb3bd; }
+  .hero-price strong { color:#ffd166; font-size:26px; }
+  .video-frame { position:relative; padding-bottom:56.25%; height:0; overflow:hidden; border-radius:12px; box-shadow:0 10px 30px rgba(0,0,0,.35); margin:6px 0 8px; }
+  .video-frame iframe { position:absolute; top:0; left:0; width:100%; height:100%; border:0; }
+  section { padding:44px 0; }
+  section.alt { background:#fff; }
+  h2 { font-size:30px; margin-bottom:18px; text-align:center; }
+  h2 .accent { color:#e63946; }
+  p.lead { font-size:18px; text-align:center; max-width:620px; margin:0 auto 10px; color:#444; }
+  ul.check { list-style:none; margin:24px 0; }
+  ul.check li { background:#fff; border:1px solid #e5e5ea; border-left:5px solid #2a9d8f; border-radius:6px; padding:14px 16px; margin-bottom:12px; font-size:16.5px; }
+  section.alt ul.check li { background:#f7f7f9; }
+  .pain { background:#fff3f3; border:1px solid #f5c2c7; border-radius:8px; padding:22px; margin:24px 0; }
+  .pain li { margin:8px 0 8px 20px; }
+  .stats { display:flex; flex-wrap:wrap; gap:12px; justify-content:center; }
+  .stat { flex:1 1 120px; background:#fff; border:1px solid #e5e5ea; border-top:4px solid #ffd166; border-radius:8px; padding:16px 8px; text-align:center; }
+  .stat .num { font-size:30px; font-weight:800; color:#0f2027; line-height:1.1; }
+  .stat .lbl { font-size:13px; color:#555; text-transform:uppercase; letter-spacing:1px; }
+  .steps { display:flex; flex-wrap:wrap; gap:14px; margin-top:8px; }
+  .step { flex:1 1 200px; background:#fff; border:1px solid #e5e5ea; border-radius:8px; padding:20px; }
+  section.alt .step { background:#f7f7f9; }
+  .step .n { display:inline-block; background:#e63946; color:#fff; width:34px; height:34px; line-height:34px; border-radius:50%; font-weight:800; text-align:center; margin-bottom:10px; }
+  .step h3 { font-size:18px; margin-bottom:6px; }
+  .step p { font-size:15.5px; color:#444; }
+  .real-note { background:#fff8e1; border:1px solid #ffd166; border-radius:8px; padding:16px 18px; text-align:center; font-size:16.5px; margin:0 0 26px; }
+  .feature { background:#fff; border:1px solid #e5e5ea; border-radius:10px; padding:22px; margin-bottom:22px; }
+  section.alt .feature { background:#f7f7f9; }
+  .feature img { width:100%; height:auto; display:block; border:1px solid #e5e5ea; border-radius:8px; margin-bottom:14px; }
+  .feature h3 { font-size:22px; margin-bottom:6px; }
+  .feature ul.check { margin:10px 0 0; }
+  .feature ul.check li { margin-bottom:8px; padding:10px 14px; font-size:15.5px; background:#fff; }
+  section.alt .feature ul.check li { background:#fff; }
+  .guarantee { background:#eafaf1; border:2px dashed #2a9d8f; border-radius:10px; padding:26px; text-align:center; margin:24px 0; }
+  .guarantee h3 { font-size:24px; margin-bottom:8px; }
+  .faq { margin-top:10px; }
+  .faq details { background:#fff; border:1px solid #e5e5ea; border-radius:6px; padding:14px 16px; margin-bottom:10px; }
+  .faq summary { font-weight:700; cursor:pointer; font-size:16.5px; }
+  .faq p { margin-top:8px; color:#444; }
+  .price-box { background:#0f2027; color:#fff; border-radius:12px; padding:36px 28px; text-align:center; margin:10px 0 0; }
+  .price-box .old { text-decoration:line-through; color:#9fb3bd; font-size:18px; }
+  .price-box .now { font-size:52px; font-weight:800; color:#ffd166; margin:6px 0; }
+  .price-box ul { list-style:none; margin:18px 0 24px; color:#dbe7ee; }
+  .price-box li { margin:6px 0; }
+  .stack { text-align:left; max-width:540px; margin:22px auto 6px; }
+  .stack .row { display:flex; justify-content:space-between; align-items:baseline; gap:14px; padding:11px 0; border-bottom:1px dashed rgba(255,255,255,.25); color:#dbe7ee; font-size:16px; }
+  .stack .row .val { color:#ffd166; font-weight:700; white-space:nowrap; }
+  .stack .row .tag { display:inline-block; background:#ffd166; color:#0f2027; font-size:11.5px; font-weight:800; letter-spacing:1px; padding:2px 8px; border-radius:4px; margin-right:8px; vertical-align:2px; }
+  .stack .total { border-bottom:none; font-size:18px; font-weight:800; color:#fff; }
+  .stack .total .val { color:#9fb3bd; text-decoration:line-through; }
+  .final-cta { background:linear-gradient(135deg,#0f2027,#203a43,#2c5364); color:#fff; text-align:center; }
+  .final-cta h2 { color:#fff; }
+  .final-cta p { color:#dbe7ee; font-size:18px; max-width:560px; margin:0 auto 24px; }
+  .sticky-bar { position:fixed; left:0; right:0; bottom:0; background:#0f2027; color:#fff; padding:10px 16px; display:flex; align-items:center; justify-content:center; gap:16px; flex-wrap:wrap; text-align:center; z-index:999; box-shadow:0 -4px 20px rgba(0,0,0,.3); }
+  .sticky-bar .p { font-size:17px; font-weight:700; }
+  .sticky-bar .p s { color:#9fb3bd; font-weight:400; }
+  .sticky-bar .p .amt { color:#ffd166; }
+  .sticky-bar a { background:#ffd166; color:#0f2027; font-weight:800; padding:10px 26px; border-radius:8px; text-decoration:none; font-size:16px; white-space:nowrap; }
+  footer { background:#111; color:#8a8a8a; font-size:13px; padding:30px 0; text-align:center; }
+  footer a { color:#bbb; }
+  .center { text-align:center; }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <span class="eyebrow">Songlap Deals · New</span>
+    <h1>Create Complete Kids Activity Books in Minutes — Mazes, Coloring Pages, Word Searches &amp; More</h1>
+    <p class="sub">One friendly online tool with <strong>7 activity makers</strong> plus a built-in <strong>Book Builder</strong> — generate print-ready activity pages for Amazon KDP &amp; Etsy, made for ages 4–8. No design skills needed, and nothing to install: it runs right in your browser.</p>
+    <div class="video-frame">
+      <iframe src="https://www.youtube.com/embed/NX70Nqs8Pmw" title="Kids Activity Book Generator — Walkthrough" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    <p class="price-note">🎬 Watch the walkthrough — every page in this video was generated by the tool itself.</p>
+    <img class="cover" src="cover.jpg" alt="Kids Activity Book Generator cover">
+    <a class="cta-btn gold" href="%%BUY_URL_J%%">Get Instant Access — $27</a>
+    <p class="hero-price"><s>$47</s> <strong>$27</strong> · One-time payment — no monthly fees, ever</p>
+  </div>
+</header>
+
+<section style="padding:28px 0 8px;">
+  <div class="wrap">
+    <div class="stats">
+      <div class="stat"><div class="num">7</div><div class="lbl">Activity Makers</div></div>
+      <div class="stat"><div class="num">18</div><div class="lbl">Coloring Designs</div></div>
+      <div class="stat"><div class="num">6</div><div class="lbl">Word-Search Themes</div></div>
+      <div class="stat"><div class="num">2</div><div class="lbl">Book Sizes</div></div>
+      <div class="stat"><div class="num">Always</div><div class="lbl">Solutions Included</div></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Sound <span class="accent">familiar?</span></h2>
+    <div class="pain">
+      <ul>
+        <li>Drawing mazes, coloring pages and puzzles by hand takes hours — a single book can take days.</li>
+        <li>Hiring an illustrator for every page is expensive, and every round of changes takes longer.</li>
+        <li>Most tools do just one thing — one makes mazes, another does word searches — so you end up juggling different apps and subscriptions.</li>
+        <li>Working out every answer and solution by hand is slow, and one mistake ruins the whole page.</li>
+      </ul>
+    </div>
+    <p class="lead"><strong>Kids Activity Book Generator</strong> puts all seven activity makers in one place. Pick an activity, click Generate, and get a fresh, print-ready page — with its solution already worked out. Then let the Book Builder assemble a complete book for you.</p>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="wrap">
+    <h2>As easy as <span class="accent">1 – 2 – 3</span></h2>
+    <div class="steps">
+      <div class="step">
+        <span class="n">1</span>
+        <h3>Pick an activity &amp; click Generate</h3>
+        <p>Choose mazes, word search, coloring, dot-to-dot, tracing, counting or odd-one-out — fresh pages appear in seconds, solutions included.</p>
+      </div>
+      <div class="step">
+        <span class="n">2</span>
+        <h3>Print pages — or build a whole book</h3>
+        <p>Print single pages, export them as PNG images, or use the Book Builder to assemble a titled, numbered book with a full Solutions section at the back.</p>
+      </div>
+      <div class="step">
+        <span class="n">3</span>
+        <h3>Publish, sell — or teach</h3>
+        <p>Publish your book on Amazon KDP, sell pages as printables on Etsy, or hand them out in class and at home.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>What you can <span class="accent">create</span></h2>
+    <div class="real-note">📸 <strong>Real output only:</strong> every page in the video above and every sample below was generated by the tool itself — no mockups, no stock images.</div>
+
+    <div class="feature">
+      <img src="sample_maze.png" alt="Maze page generated by Kids Activity Book Generator">
+      <h3>🌀 Mazes</h3>
+      <ul class="check">
+        <li>Easy, Medium and Challenge sizes, from first mazes to real brain-teasers.</li>
+        <li>Every maze is generated with exactly one solution — and the solution view draws the correct path for your answer pages.</li>
+        <li>A brand-new maze on every click — your books never repeat themselves.</li>
+      </ul>
+    </div>
+
+    <div class="feature">
+      <img src="sample_wordsearch.png" alt="Word search page generated by Kids Activity Book Generator">
+      <h3>🔤 Word Search</h3>
+      <ul class="check">
+        <li>6 ready-made kid themes: Animals, Ocean, Space, Food, Sports and Nature.</li>
+        <li>Or type in your own word list — spelling lists, names, classroom vocabulary.</li>
+        <li>Solution view highlights every hidden word, ready for your answer pages.</li>
+      </ul>
+    </div>
+
+    <div class="feature">
+      <img src="sample_coloring.png" alt="Coloring page generated by Kids Activity Book Generator">
+      <h3>🎨 Coloring Pages</h3>
+      <ul class="check">
+        <li>18 built-in designs — cat, dog, fish, rocket, butterfly and more — plus mandala patterns.</li>
+        <li>Bold, clean outlines with big open areas that are easy for little hands to color.</li>
+        <li>Print one page or fill a whole coloring book with the Book Builder.</li>
+      </ul>
+    </div>
+
+    <div class="feature">
+      <img src="sample_dottodot.png" alt="Dot-to-dot page generated by Kids Activity Book Generator">
+      <h3>🔢 Dot-to-Dot</h3>
+      <ul class="check">
+        <li>Numbered dots that reveal a picture as kids connect them in order.</li>
+        <li>Builds number order, counting and fine-motor control while kids play.</li>
+        <li>Answer view included, showing the completed picture.</li>
+      </ul>
+    </div>
+
+    <div class="feature">
+      <img src="sample_tracing.png" alt="Tracing page generated by Kids Activity Book Generator">
+      <h3>✏️ Tracing</h3>
+      <ul class="check">
+        <li>Uppercase letters, lowercase letters, numbers 0–9 and simple words.</li>
+        <li>Printed on real handwriting guide lines, just like school practice paper.</li>
+        <li>Perfect for preschool and kindergarten readiness practice.</li>
+      </ul>
+    </div>
+
+    <div class="feature">
+      <img src="sample_counting.png" alt="Counting page generated by Kids Activity Book Generator">
+      <h3>🍎 Counting</h3>
+      <ul class="check">
+        <li>Count the pictures and write the number in the box.</li>
+        <li>Choose counting up to 10 or up to 20, across 4 picture groups per page.</li>
+        <li>Every count is generated with its answer, so checking is instant.</li>
+      </ul>
+    </div>
+
+    <div class="feature">
+      <img src="sample_odd.png" alt="Odd one out page generated by Kids Activity Book Generator">
+      <h3>👀 Odd One Out</h3>
+      <ul class="check">
+        <li>Spot the one picture that is different from all the others.</li>
+        <li>3 difficulty levels — a different picture, a different color, or a sneaky rotation.</li>
+        <li>The answer is recorded for every grid and printed in your solutions.</li>
+      </ul>
+    </div>
+
+    <div class="feature">
+      <img src="sample_book.png" alt="Complete activity book assembled by the Book Builder">
+      <h3>📚 Book Builder</h3>
+      <ul class="check">
+        <li>Mix any activities into one complete book: your title page, numbered activity pages, and a full Solutions section at the back.</li>
+        <li>Two KDP-friendly sizes: 8.5 × 11 in and 8.5 × 10 in.</li>
+        <li>Download the whole book as a print-ready PDF, ready to upload to Amazon KDP.</li>
+        <li>Every single page can also be exported as a high-resolution PNG image.</li>
+      </ul>
+    </div>
+
+    <div class="center">
+      <a class="cta-btn" href="%%BUY_URL_J%%">Get Instant Access — $27</a>
+      <p class="price-note" style="color:#555;">One-time payment · Instant delivery · 14-day money-back guarantee</p>
+    </div>
+  </div>
+</section>
+
+<section id="buy" class="alt">
+  <div class="wrap">
+    <h2>Everything you <span class="accent">get</span></h2>
+    <div class="price-box">
+      <div class="stack">
+        <div class="row"><span><strong>Kids Activity Book Generator</strong> — the full online tool, all 7 activity makers</span><span class="val">$47 value</span></div>
+        <div class="row"><span><strong>Book Builder</strong> — built in: title page, numbered pages, full Solutions section</span><span class="val">$27 value</span></div>
+        <div class="row"><span><span class="tag">BONUS 1</span><strong>KDP Publishing Quick-Start Guide</strong> — 10-page PDF, from finished book to published on Amazon</span><span class="val">$27 value</span></div>
+        <div class="row"><span><span class="tag">BONUS 2</span><strong>Done-For-You Sample Activity Book</strong> — 25 pages made by the tool itself, solutions included</span><span class="val">$17 value</span></div>
+        <div class="row total"><span>Total value</span><span class="val">$118</span></div>
+      </div>
+      <div class="old">Regular price: $47</div>
+      <div class="now">$27</div>
+      <p>Launch price — one-time payment, no monthly fees, ever</p>
+      <a class="cta-btn gold" href="%%BUY_URL_J%%">Get Instant Access — $27</a>
+      <p class="price-note" style="margin-top:14px;">⚡ <strong>Instant delivery</strong> — your personal license code appears on your delivery page right after checkout. Secure checkout via JVZoo · PayPal &amp; cards accepted</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Made for <span class="accent">you</span></h2>
+    <p class="lead">KDP publishers building a kids' activity catalogue, Etsy sellers offering printable activity packs, teachers who need fresh pages fast, and homeschool parents. If you can use a web browser, you can use this tool.</p>
+    <div class="guarantee">
+      <h3>🛡️ 14-Day Money-Back Guarantee</h3>
+      <p>Try the Kids Activity Book Generator for a full 14 days. If you don't feel it makes creating activity books dramatically faster and easier, email us within 14 days of purchase and we'll refund your $27 — no questions asked.</p>
+    </div>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="wrap">
+    <h2>Questions, <span class="accent">answered</span></h2>
+    <div class="faq">
+      <details>
+        <summary>What exactly does the tool make?</summary>
+        <p>Seven kinds of printable kids' activity pages — mazes, word searches, coloring pages, dot-to-dot, tracing, counting and odd-one-out — each with its solution or answer included. The built-in Book Builder combines them into complete books with a title page, numbered pages and a Solutions section.</p>
+      </details>
+      <details>
+        <summary>What ages is it for?</summary>
+        <p>The activities are designed for children aged 4–8: big bold coloring outlines, easy-to-challenge mazes, letter and number tracing, and counting up to 10 or 20.</p>
+      </details>
+      <details>
+        <summary>Do I need to install anything? What devices does it work on?</summary>
+        <p>Nothing to install — the tool runs entirely in your web browser. It works on any computer, tablet or phone with an internet connection. You generate pages online, then print them or save them as a PDF or PNG.</p>
+      </details>
+      <details>
+        <summary>How does the personal license code work?</summary>
+        <p>Right after checkout, your personal delivery page shows your unique license code, already registered to your name. Open the tool, enter your name and code once, and it unlocks — the tool shows "Licensed to: your name". One buyer gets one code, and a code only ever works under its first buyer's name, so please keep yours private. If you ever lose it, open the same delivery link again — it always shows your code.</p>
+      </details>
+      <details>
+        <summary>Can I sell the books I create with it?</summary>
+        <p>Yes. The activity books and printables you generate are yours to sell on Amazon KDP, Etsy, or anywhere else. Only the tool itself is licensed to you personally — access to the tool may not be shared, given away or resold.</p>
+      </details>
+      <details>
+        <summary>What book sizes can I make for KDP?</summary>
+        <p>The Book Builder creates books at 8.5 × 11 in and 8.5 × 10 in — the two most popular trim sizes for kids' activity books on Amazon KDP — and downloads them as a print-ready PDF.</p>
+      </details>
+      <details>
+        <summary>Are the answers and solutions included?</summary>
+        <p>Yes — always. Mazes and word searches come with solution views, dot-to-dot has an answer view, and counting and odd-one-out answers are generated with each page. Books built with the Book Builder get a complete Solutions section at the back, keyed to the page numbers.</p>
+      </details>
+      <details>
+        <summary>Can I export pages as images?</summary>
+        <p>Yes. Every single page can be exported as a high-resolution PNG (about 300 DPI) — handy for Etsy listing images, previews, and social posts — as well as printed or saved as PDF.</p>
+      </details>
+      <details>
+        <summary>Is this a subscription?</summary>
+        <p>No. You pay once — $27 — and the tool is yours to use. There are no monthly fees and no per-book charges.</p>
+      </details>
+      <details>
+        <summary>How do I receive everything after I buy?</summary>
+        <p>Instantly. After checkout, open the access link on your JVZoo receipt page: your delivery page shows your personal license code right away, together with your two bonus PDFs — the KDP Publishing Quick-Start Guide and the Done-For-You Sample Activity Book. No waiting for emails.</p>
+      </details>
+      <details>
+        <summary>What if it doesn't work for me?</summary>
+        <p>You're covered by the 14-day money-back guarantee. Email klankhan451@gmail.com within 14 days of purchase and we'll refund your $27.</p>
+      </details>
+      <details>
+        <summary>How do I get help?</summary>
+        <p>Email us any time at klankhan451@gmail.com and we'll help you out. If you're writing about a license code, include the name you bought under so we can find it quickly.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section class="final-cta">
+  <div class="wrap">
+    <h2>Start creating your first activity book today</h2>
+    <p>Your first complete, print-ready kids activity book is minutes away — mazes, coloring pages, word searches and more, with every solution included.</p>
+    <a class="cta-btn gold" href="%%BUY_URL_J%%">Get Instant Access — $27</a>
+    <p class="price-note">Regular $47 · Today $27 · One-time payment · 14-day money-back guarantee</p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p><strong>Kids Activity Book Generator</strong> by Songlap Deals · Support: <a href="mailto:klankhan451@gmail.com">klankhan451@gmail.com</a> · <a href="privacy-policy.html">Privacy Policy</a></p>
+    <!-- TODO: insert JVZoo required disclaimer text verbatim before compliance submission -->
+    <p style="margin-top:10px;">Disclaimer: This is an activity-book creation tool for publishers, teachers and parents. It does not promise or guarantee income, sales, or any specific result. Any results from materials you publish depend on your own effort, catalogue, and market conditions.</p>
+    <p style="margin-top:10px;">© 2026 Songlap Deals. All rights reserved.</p>
+  </div>
+</footer>
+
+<div class="sticky-bar">
+  <span class="p">Kids Activity Book Generator — <s>$47</s> <span class="amt">$27</span></span>
+  <a href="%%BUY_URL_J%%">Get Instant Access</a>
+</div>
+
+</body>
+</html>
